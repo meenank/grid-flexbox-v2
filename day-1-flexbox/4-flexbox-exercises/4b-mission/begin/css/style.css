@@ -60,6 +60,15 @@ section ul {
 
 Spelled out the individual border styles so border-color could go elsewhere. Styling is the same for all borders except the color. */
 
+.mission img {
+    display: block;
+}
+
+p {
+    max-width: 500px;
+    text-align: justify;
+}
+
 figure {
     margin: 0 0 0.5rem 0;
     padding: 0;
@@ -156,6 +165,27 @@ figcaption a {
     figure img {
         object-position: 0;
     }
+    /* mission styling */
+    .text {
+        display: flex;
+        flex-flow: row nowrap;
+        /* justify-content: space-between; */
+        /* max-width: 800px; */
+        margin: auto;
+        gap: 1rem;
+        /* border: 1px solid red; */
+        width: 100%;
+    }
+    .text img {
+        flex-basis: 39.5%;
+        order: 1;
+        max-height: 250px;
+    }
+    .text p {
+        order: 2;
+        line-height: 1.5;
+        flex-basis: 60.5%;
+    }
 }
 
 @media (min-width: 800px) {
@@ -164,5 +194,17 @@ figcaption a {
     }
     section li {
         flex-basis: 32.5%;
+    }
+    .text {
+        width: 100%;
+    }
+    .text img {
+        flex-basis: 33%;
+        /* border: 1px solid red; */
+    }
+    .text p {
+        /* border: 1px solid red; */
+        shape-outside: ellipse(120px 200px at 40% 50%);
+        flex-basis: 100%;
     }
 }

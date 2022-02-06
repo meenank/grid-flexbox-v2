@@ -45,14 +45,64 @@ section h2 {
 }
 
 
-/* Initial mobile layout: a series of images stacked on top of each other with the figure caption over the image. */
+/* In
+itial mobile layout: a series of images stacked on top of each other with the figure caption over the image. */
+
+section ul {
+    list-style-type: none;
+    max-width: 100%;
+}
+
+li a {
+    text-decoration: none;
+    color: #fff;
+    /* display: block; */
+}
+
+figure {
+    overflow: hidden;
+    position: relative;
+}
+
+figure img {
+    width: 100%;
+    margin: 0 0 -4px 0;
+}
+
+figure figcaption {
+    position: absolute;
+    background-color: #333;
+    bottom: 0;
+    /* width: 93%; */
+    padding: 1rem;
+    opacity: 0.9;
+    width: 100%;
+}
 
 
 /* At this breakpoint, transition to 2 figures per line */
 
-@media (min-width: 550px) {}
+@media (min-width: 550px) {
+    section ul {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+    }
+    li {
+        flex-basis: 49%;
+    }
+}
 
 
 /* At this breakpoint, transition to 3 figures per line */
 
-@media (min-width: 800px) {}
+@media (min-width: 800px) {
+    section ul {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+    }
+    li {
+        flex-basis: 30%;
+    }
+}

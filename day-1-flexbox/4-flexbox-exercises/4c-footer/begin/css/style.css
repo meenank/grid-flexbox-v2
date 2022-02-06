@@ -153,6 +153,35 @@ figcaption a {
     display: block;
 }
 
+footer {
+    background-color: var(--color5);
+    padding: 2rem;
+}
+
+footer ul {
+    list-style-type: none;
+    display: flex;
+    flex: row nowrap;
+    justify-content: flex-start;
+    gap: 1rem;
+    /* border: 1px solid red; */
+}
+
+li:nth-child(1) {
+    /* border: 1px solid red; */
+    margin-left: -2rem;
+}
+
+li a {
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+footer address {
+    font-style: normal;
+    font-weight: bold;
+}
+
 
 /* turn on flexbox here - prior to this, elements stacked individually as blocks */
 
@@ -180,6 +209,21 @@ figcaption a {
         shape-outside: polygon(35.84% 94.87%, 34.64% 87.05%, 51.64% 4.06%, 55.1% 2.38%);
         max-height: 211px;
     }
+    footer ul {
+        margin-top: -1rem;
+    }
+    footer {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+    }
+    footer .social {
+        margin-top: -1rem;
+    }
+    footer address {
+        flex-basis: 48%;
+        padding: 0;
+    }
 }
 
 @media (min-width: 800px) {
@@ -188,5 +232,11 @@ figcaption a {
     }
     section li {
         flex-basis: 32.5%;
+    }
+    footer .social {
+        margin-left: 9.5rem;
+    }
+    footer address {
+        flex-basis: 62%;
     }
 }
