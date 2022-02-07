@@ -136,6 +136,53 @@ figcaption a {
 }
 
 
+/* nav bar styling */
+
+.header {
+    background-color: var(--color5);
+    width: 100%;
+    padding-bottom: 1rem;
+}
+
+
+/* .header header {
+    margin-left: -2rem;
+} */
+
+.header nav {
+    margin-left: -2.5rem;
+}
+
+.header ul {
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin: 0 auto;
+}
+
+.header nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.header nav li:nth-child(1) {
+    flex-basis: 100%;
+    text-align: center;
+    background-color: transparent;
+}
+
+.header nav ul li {
+    background-color: var(--color10);
+    /* border: 1px solid red; */
+    flex-basis: 46%;
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 5px;
+    margin: 0.2rem 0;
+}
+
+
 /* mission styles */
 
 #mission {
@@ -235,6 +282,26 @@ footer address {
     footer address {
         margin-top: 0;
     }
+    /* nav bar stlying  */
+    .header nav ul {
+        justify-content: center;
+        gap: 1em;
+    }
+    .header header nav li {
+        background-color: transparent;
+    }
+    .header header nav a {
+        color: black;
+    }
+    .header header nav li:nth-child(1) {
+        padding: 1rem;
+    }
+    .header header nav li {
+        flex-basis: auto;
+        /* border: 1px solid red; */
+        padding: 0;
+        margin: 0;
+    }
 }
 
 @media (min-width: 800px) {
@@ -247,5 +314,26 @@ footer address {
     }
     address {
         flex-basis: 65.5%;
+    }
+    /* navbar styling */
+    .header nav li:nth-child(1) {
+        flex-basis: 50%;
+        order: 2;
+        margin-top: .5em;
+    }
+    .header nav li:nth-child(2),
+    .header nav li:nth-child(3) {
+        order: 1;
+        flex-basis: auto;
+        margin: 2em 0 0 0;
+    }
+    .header nav li:nth-child(4),
+    .header nav li:nth-child(5) {
+        order: 3;
+        flex-basis: auto;
+        margin: 2em 0 0 0;
+    }
+    .header nav li a {
+        font-weight: 600;
     }
 }
